@@ -108,3 +108,53 @@ img:hover {
 	border: 6px solid #464647;
     box-shadow: 0 0 10px #25292b;
 }
+
+@media (max-width: 1182px) {
+	#playground {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 982px) {
+	#playground {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 982px) {
+	img {
+        display: block;
+        margin: 30px auto;
+        width: 45%;
+    }
+}
+
+@media (max-width: 642px) {
+    header h2 {
+        font-size: 20pt;
+    }
+}
+
+@media (max-width: 582px) {
+    p {
+        font-size: 10pt;
+    }
+
+    button {
+        font-size: 7pt;
+    }
+
+    #box-score {
+        width: 250px;
+    }
+
+    #box-score h5 {
+        font-size: 15pt;
+    }
+}
+
+@media (max-width: 470px) {
+	header h2 {
+        font-size: 15pt;
+    }
+}
