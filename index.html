@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors!</title>
+    <meta name="description" content="Play a rock, paper, and scissors game!" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h2>Rock, Paper, Scissors!</h2>
+    </header>
+    <div id="main">
+        <p>
+            <span>Mechanics: </span> Pick one of the three choices (Rock, Paper, Scissors) below and the AI will also pick one. Outscore the AI!
+        </p>
+        <button onclick="location.reload();">Reset score</button>
+        <div id="box-score">
+            <h5>
+                You &#8594; <span id="userScore">0</span>
+            </h5>
+            <h5>
+                <span id="aiScore">0</span> &#8592; AI
+            </h5>
+        </div>
+        <p id="message">Game on!</p>
+        <div id="playground">
+            <img id="rock" src="images/rock.png" alt="Rock" />
+            <img id="paper" src="images/paper.png" alt="Paper" />
+            <img id="scissor" src="images/scissors.png" alt="Scissor" />
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
