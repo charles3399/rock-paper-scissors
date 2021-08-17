@@ -61,6 +61,13 @@ function draw(userChoice, aiChoice) {
     setTimeout(() => userChoiceimg.classList.remove('draw'), 500);
 }
 
+function resetScore() {
+    userScore = 0;
+    aiScore = 0;
+    aiscoreSpan.innerHTML = aiScore;
+    userscoreSpan.innerHTML = userScore;
+}
+
 function main() {
     rock.addEventListener('click', function(){
         game('rock');
