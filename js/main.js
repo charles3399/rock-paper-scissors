@@ -61,7 +61,7 @@ function win(userChoice, aiChoice) {
     localStorage.setItem('userScore', JSON.stringify(userScore))
     let msgContent = ''
     userscoreSpan.textContent = userScore
-    let res = message.textContent = `'Your ${userChoice} beats AI's ${aiChoice}`
+    let res = message.textContent = `Your ${userChoice} beats AI's ${aiChoice}`
     msgContent = res
     const userChoiceimg = document.getElementById(userChoice)
     userChoiceimg.classList.add('win')
