@@ -37,20 +37,20 @@ function getComputerChoice() {
 
 function game(userChoice) {
     const computerChoice = getComputerChoice()
-    switch (userChoice + computerChoice) {
-        case 'rockscissor':
-        case 'paperrock':
-        case 'scissorpaper':
+    switch (userChoice + " " + computerChoice) {
+        case 'rock scissor':
+        case 'paper rock':
+        case 'scissor paper':
             win(userChoice, computerChoice)
             break
-        case 'rockpaper':
-        case 'paperscissor':
-        case 'scissorrock':
+        case 'rock paper':
+        case 'paper scissor':
+        case 'scissor rock':
             lose(userChoice, computerChoice)
             break
-        case 'rockrock':
-        case 'paperpaper':
-        case 'scissorscissor':
+        case 'rock rock':
+        case 'paper paper':
+        case 'scissor scissor':
             draw(userChoice, computerChoice)
             break
     }
