@@ -59,10 +59,8 @@ function game(userChoice) {
 function win(userChoice, aiChoice) {
     userScore++
     localStorage.setItem('userScore', JSON.stringify(userScore))
-    let msgContent = ''
     userscoreSpan.textContent = userScore
-    let res = message.textContent = `Your ${userChoice} beats AI's ${aiChoice}`
-    msgContent = res
+    message.textContent = `Your ${userChoice} beats AI's ${aiChoice}`
     const userChoiceimg = document.getElementById(userChoice)
     userChoiceimg.classList.add('win')
     setTimeout(() => userChoiceimg.classList.remove('win'), 500)
@@ -71,17 +69,15 @@ function win(userChoice, aiChoice) {
 function lose(userChoice, aiChoice) {
     aiScore++
     localStorage.setItem('aiScore', JSON.stringify(aiScore))
-    let msgContent = ''
     aiscoreSpan.textContent = aiScore
-    let res = message.textContent = `AI's ${aiChoice} beats your ${userChoice}`
-    msgContent = res
+    message.textContent = `AI's ${aiChoice} beats your ${userChoice}`
     const userChoiceimg = document.getElementById(userChoice)
     userChoiceimg.classList.add('lose')
     setTimeout(() => userChoiceimg.classList.remove('lose'), 500)
 }
 
 function draw(userChoice, aiChoice) {
-    message.textContent = `'You picked ${aiChoice} and AI picked ${userChoice} It's a DRAW!`
+    message.textContent = `You picked ${aiChoice} and AI picked ${userChoice} It's a DRAW!`
     const userChoiceimg = document.getElementById(userChoice)
     userChoiceimg.classList.add('draw')
     setTimeout(() => userChoiceimg.classList.remove('draw'), 500)
