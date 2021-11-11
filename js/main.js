@@ -20,7 +20,7 @@ if(aiScoreFromStorage){
     aiScore = aiScoreFromStorage
 }
 
-btnReset.addEventListener('click', function() {
+btnReset.addEventListener('click', () => {
     localStorage.clear()
     userScore = 0
     aiScore = 0
@@ -29,13 +29,13 @@ btnReset.addEventListener('click', function() {
     message.textContent = 'Game on!'
 })
 
-function getComputerChoice() {
+getComputerChoice = () => {
     const choices = ['rock','paper','scissor']
     const randomChoice = Math.floor(Math.random() * choices.length)
     return choices[randomChoice]
 }
 
-function game(userChoice) {
+game = (userChoice) => {
     const computerChoice = getComputerChoice()
     switch (userChoice + " " + computerChoice) {
         case 'rock scissor':
@@ -56,7 +56,7 @@ function game(userChoice) {
     }
 }
 
-function win(userChoice, aiChoice) {
+win = (userChoice, aiChoice) => {
     userScore++
     localStorage.setItem('userScore', JSON.stringify(userScore))
     userscoreSpan.textContent = userScore
@@ -66,7 +66,7 @@ function win(userChoice, aiChoice) {
     setTimeout(() => userChoiceimg.classList.remove('win'), 500)
 }
 
-function lose(userChoice, aiChoice) {
+lose = (userChoice, aiChoice) => {
     aiScore++
     localStorage.setItem('aiScore', JSON.stringify(aiScore))
     aiscoreSpan.textContent = aiScore
@@ -76,21 +76,21 @@ function lose(userChoice, aiChoice) {
     setTimeout(() => userChoiceimg.classList.remove('lose'), 500)
 }
 
-function draw(userChoice, aiChoice) {
+draw = (userChoice, aiChoice) => {
     message.textContent = `You picked ${aiChoice} and AI picked ${userChoice} It's a DRAW!`
     const userChoiceimg = document.getElementById(userChoice)
     userChoiceimg.classList.add('draw')
     setTimeout(() => userChoiceimg.classList.remove('draw'), 500)
 }
 
-function main() {
-    rock.addEventListener('click', function(){
+main = () => {
+    rock.addEventListener('click', () => {
         game('rock')
     })
-    paper.addEventListener('click', function(){
+    paper.addEventListener('click', () => {
         game('paper')
     })
-    scissor.addEventListener('click', function(){
+    scissor.addEventListener('click', () => {
         game('scissor')
     })
 }
